@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    justify-content: center;
+}
+
+body[data-theme="t-theme1"] {
+    --color-background: hsl(222, 26%, 31%);
+    --color-background-bottom: hsl(0, 0%, 93%);
+    --color-bottom: hsl(222, 26%, 31%);
+    --color-light: hsl(0, 0%, 93%);
+    --color-light-dark: hsl(38, 10%, 84%);
+    --color-gray: hsl(35, 11%, 61%);
+    --color-gray-dark: hsl(28, 16%, 65%);
+    --color-orange: hsl(25, 98%, 40%);
+    --color-orange-light: hsla(25, 98%, 50%, 0.979);
+    --color-violet: hsl(281, 77%, 39%);
+    --color-violet-dark: hsl(281, 89%, 26%);
+    --color-red: hsl(6, 63%, 50%);
+    --color-red-dark: hsl(6, 63%, 50%);
+    --color-display: hsl(223, 31%, 20%);
+    --color-equal: hsl(0, 0%, 93%);
+    --color-del-reset: hsl(0, 0%, 93%);
+    --color-reset: hsl(225, 21%, 49%);
+    --color-reset-dark: hsl(224, 28%, 35%);
+}
+
+body[data-theme="t-theme2"] {
+    --color-background: hsl(0, 5%, 81%);
+    --color-background-bottom: hsl(0, 5%, 81%);
+    --color-bottom: hsl(0, 0, 100%);
+    --color-light: hsl(0, 0, 100%);
+    --color-light-dark: hsl(38, 10%, 84%);
+    --color-gray: hsl(35, 11%, 61%);
+    --color-gray-dark: hsl(35, 11%, 61%);
+    --color-orange: hsl(25, 98%, 40%);
+    --color-orange-light: hsla(25, 98%, 50%, 0.979);
+    --color-violet: hsl(281, 77%, 39%);
+    --color-violet-dark: hsl(281, 89%, 26%);
+    --color-red: hsl(25, 98%, 40%);
+    --color-red-dark: hsl(25, 99%, 27%);
+    --color-display: hsl(0, 0%, 93%);
+    --color-equal: hsl(0, 0%, 93%);
+    --color-del-reset: hsl(0, 0%, 93%);
+    --color-reset: hsl(185, 42%, 37%);
+    --color-reset-dark: hsl(185, 58%, 25%);
+}
+
+body[data-theme="t-theme3"] {
+    --color-background: hsl(268, 75%, 9%);
+    --color-background-bottom: hsl(268, 47%, 21%);
+    --color-bottom: hsl(52, 100%, 62%);
+    --color-light: hsl(52, 100%, 62%);
+    --color-light-dark: hsl(38, 10%, 84%);
+    --color-gray: hsl(35, 11%, 61%);
+    --color-gray-dark: hsl(290, 70%, 36%);
+    --color-orange: hsl(25, 98%, 40%);
+    --color-orange-light: hsla(25, 98%, 50%, 0.979);
+    --color-violet: hsl(281, 77%, 39%);
+    --color-violet-dark: hsl(281, 89%, 26%);
+    --color-red: hsl(176, 100%, 44%);
+    --color-red-dark: hsl(177, 92%, 70%);
+    --color-display: hsl(268, 71%, 12%);
+    --color-equal: hsl(0, 0%, 93%);
+    --color-del-reset: hsl(0, 0%, 93%);
+    --color-reset: hsl(281, 89%, 26%);
+    --color-reset-dark: hsl(285, 91%, 52%);
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    background: var(--color-background);
+    font-family: 'Spartan', sans-serif;    
+    padding: 1.5rem;
+
+}
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+header .title {
+    font-size: 1.3rem;
+    color: var(--color-light);
+}
+
+header .theme {
+    display: flex;
+    align-items: center;
+}
+
+header .theme h2 {
+    font-size: 0.7rem;
+    color: var(--color-light);
+    margin-right: 1rem;
+}
+
+header .button-theme button {
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+header .button-theme .theme1 {
+    background: var(--color-gray);
+    color: var(--color-light);
+}
+
+header .button-theme .theme1:hover {
+    background: var(--color-light-dark);
+    transition: background 0.3s;
+}
+
+header .button-theme .theme2 {
+    background: var(--color-orange);
+    color: var(--color-light);
+}
+
+header .button-theme .theme2:hover {
+    background: var(--color-orange-light);
+    transition: background 0.3s;
+}
+
+header .button-theme .theme3{
+    background: var(--color-violet-dark);
+    color: var(--color-light);
+}
+
+header .button-theme .theme3:hover {
+    background: var(--color-violet);
+    transition: background 0.3s;
+}
+
+
+/* MAIN */
+#display {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+section .display {
+    width: 100%;
+    padding: 1.3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: 0 none;
+
+    outline: none;
+    background:  var(--color-display);
+    color: var(--color-light);
+    text-align: right;
+}
+
+
+/* Number */
+#number {
+    background: var(--color-display);
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+table {
+    width: 100%;
+}
+
+section .line{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+
+}
+
+section .line button {
+    background: var(--color-background-bottom);
+    color: var(--color-bottom);
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 700;
+}
+
+section .line .number,
+section .line .addtion,
+section .line .score,
+section .line .division,
+section .line .subtraction,
+section .line .multiplication {
+    padding: 0.8rem 1.4rem 0.8rem 1.4rem;
+    font-size: 32px;
+    box-shadow: 0px 3px 0px var(--color-gray-dark);
+}
+
+section .line button.DEL,
+section .line .reset {
+    padding: 1.4rem 0.7rem 1rem 0.75rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    background: var(--color-reset);
+    color: var(--color-del-reset);
+    box-shadow: 0px 3px 0px var(--color-reset-dark);
+}
+
+section .line .subtraction {
+    padding: 0.8rem 1.65rem 0.8rem 1.6rem;
+}
+
+section .line .score {
+    padding: 0.5rem 1.65rem 1.1rem 1.6rem;
+}
+
+section .line .division {
+    padding: 0.8rem 1.68rem 0.8rem 1.68rem;
+}
+
+section .line .multiplication {
+    padding: 1.2rem 1.555rem 0.4rem 1.55rem;
+}
+
+section .line .reset {
+    padding: 0.93rem 2rem;
+
+}
+
+section .line .equal {
+    padding: 1.07rem 3.95rem;
+    font-weight: 900;
+    background: var(--color-red);
+    color: var(--color-equal);
+    box-shadow: 0px 3px 0px var(--color-red-dark);
+}
+
+/* Responsive */
+@media (min-width: 600px) { /* De 992 para cima */
+    body {
+        background: var(--color-background);
+    }
+
+    header {
+        margin-left: -5rem;
+        margin-right: -5rem;
+    }
+
+    main {
+        margin-left: -5rem;
+        margin-right: -5rem;
+    }
+
+    section .line .number {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    section .line .addtion {
+        padding-left: 2.65rem;
+        padding-right: 2.65rem;
+    }
+
+    section .line .subtraction {
+        padding-left: 2.87rem;
+        padding-right: 2.87rem;
+    }
+
+    section .line .multiplication {
+        padding-left: 2.835rem;
+        padding-right: 2.835rem;
+    }
+
+    section .line .score {
+        padding-left: 2.73rem;
+        padding-right: 2.73rem;
+    }
+
+    section .line .division {
+        padding-left: 2.73rem;
+        padding-right: 2.76rem;
+    }
+
+    section .line button.DEL {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    section .options td {
+        width: 100%;
+    }
+
+    section .options td .reset {
+        padding-left: 4.4rem;
+        padding-right: 4.4rem;
+    }
+
+    section .options td {
+        width: 100%;
+    }
+
+    section .options td .equal {
+        padding-left: 6.49rem;
+        padding-right: 6.50rem;
+        margin-left: 1rem;
+    }
+}
