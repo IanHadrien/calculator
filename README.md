@@ -61,10 +61,10 @@ Also it's nice to have an editor to work with code like [VsCode](https://code.vi
 
 ```bash
 # clone this repository
-$ git clone https://github.com/arthurpc03/GoFinancesWeb
+$ git clone https://github.com/IanHadrien/calculator.git
 
 # access the project folder in the terminal/cmd
-$ cd GoFinancesWeb
+$ cd calculator
 
 # install the dependencies
 $ yarn
