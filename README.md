@@ -49,28 +49,3 @@ Users should be able to:
 
 - Linkedin - [Ian Hadrien](https://www.linkedin.com/in/ian-hadrien-8051181b1/)
 
-<br>
-
-## Requisite
-
-Before starting, you will need to have the following tools installed on your machine: [Git](https://git-scm.com/downloads), [Node.js](https://nodejs.org/en/).
-Also it's nice to have an editor to work with code like [VsCode](https://code.visualstudio.com/)
-
-
-### Running
-
-```bash
-# clone this repository
-$ git clone https://github.com/IanHadrien/calculator.git
-
-# access the project folder in the terminal/cmd
-$ cd calculator
-
-# install the dependencies
-$ yarn
-
-# run the application in development mode
-$ yarn start
-
-# the server starts on the port:3000 - access <http://localhost:3000>
-```
